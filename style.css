@@ -110,6 +110,7 @@ footer {
 .tarif-btn:hover .tarif-kap {
   opacity: 1;
 }
+/* Section témoignages */
 .testimonial-section {
   background-color: #1c1c1c;
   padding: 3rem 1rem;
@@ -128,100 +129,68 @@ footer {
   color: #ccc;
 }
 
-.testimonial-carousel {
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel-track-container {
-  overflow: hidden;
-  padding: 0 1rem;
-}
-
-.carousel-track {
+.testimonial-cards {
   display: flex;
-  gap: 1.5rem;
-  transition: transform 0.5s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.carousel-slide {
-  flex: 0 0 calc(33.333% - 1rem);
-}
-
-.testimonial-content {
+.testimonial-card {
+  background: #2f2f2f;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background: #2f2f2f;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-}
-
-.testimonial-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #FFD700;
-}
-
-.testimonial-content blockquote {
-  background: #1f1f1f;
-  padding: 1rem 1.2rem;
-  border-left: 4px solid #FFD700;
-  font-style: normal;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 8px;
   text-align: left;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-content footer {
-  margin-top: 0.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #FFD700;
+/* Hover effect */
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
 }
 
 .stars {
   color: #FFD700;
   font-size: 1.2rem;
-  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
-.carousel-btn {
+.testimonial-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0 0 0.8rem 0;
+}
+
+.testimonial-card footer {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #FFD700;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+/* ✅ Badge vérifié */
+.testimonial-card footer::before {
+  content: "✔";
+  color: #00e676;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #FFD700;
-  color: #000;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 8px;
-  opacity: 0.8;
-}
-
-.carousel-btn:hover {
-  opacity: 1;
-}
-
-.carousel-btn.prev {
   left: 0;
+  top: 0;
+  font-weight: bold;
 }
 
-.carousel-btn.next {
-  right: 0;
-}
-
-@media (max-width: 768px) {
-  .carousel-slide {
-    flex: 0 0 100%;
+/* Responsive : 2 par ligne en mobile/tablette */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    width: 45%;
   }
 }
+
+@media (max-wid
