@@ -100,8 +100,8 @@ function gtag_report_conversion_email(url) {
 </p>
 <div class="cta-header">
   <a class="btn btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸 Voir nos réalisations</a>
-  <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion_email()">📧 Envoyer un email</a>
+  <a class="btn btn-phone" href="tel:+262692200461" onclick="gtag('event', 'click_phone', {'event_category': 'engagement', 'event_label': 'appel'})return gtag_report_conversion()">📞 Appeler DCVisuals</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="gtag('event', 'click_phone', {'event_category': 'engagement', 'event_label': 'appel'})return gtag_report_conversion_email()">📧 Envoyer un email</a>
 </div>
 </section>
 
@@ -231,8 +231,8 @@ function gtag_report_conversion_email(url) {
   </footer>
 
   <div class="sticky-cta-mobile">
-  <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion_email()">📧 Envoyer un email</a>
+  <a class="btn btn-phone" href="tel:+262692200461" onclick="gtag('event', 'click_phone', {'event_category': 'engagement', 'event_label': 'appel'})return gtag_report_conversion()">📞 Appeler DCVisuals</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="gtag('event', 'click_phone', {'event_category': 'engagement', 'event_label': 'appel'})return gtag_report_conversion_email()">📧 Envoyer un email</a>
   <a class="btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸</a>
 </div>
   
