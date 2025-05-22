@@ -1,3 +1,3 @@
-# Landing Page Kap Numérik x DCVisuals
+# Landing Page Kap Numérik x DCVisuals (Optimisée)
 
-Optimisé pour GitHub Pages. Déployez dans une branche publique (`main` ou `gh-pages`).
+Version enrichie avec animations, SEO et contenu synthétisé. Déployez sur GitHub Pages.
