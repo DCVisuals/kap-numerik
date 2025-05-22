@@ -13,8 +13,16 @@ body {
   padding: 2rem;
   text-align: center;
 }
-h1, h2, h3 {
-  font-size: 3rem;
+h1 {
+  font-size: 3rem; /* Taille du titre principal */
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 2rem; /* Taille des sous-titres */
+  margin-top: 1rem;
+}
+h3 {
+  font-size: 1rem;
   margin-top: 1rem;
 }
 .subtitle {
