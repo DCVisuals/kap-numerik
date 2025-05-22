@@ -40,3 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+document.querySelectorAll(".faq-section details").forEach((targetDetail) => {
+  targetDetail.addEventListener("click", () => {
+    document.querySelectorAll(".faq-section details").forEach((detail) => {
+      if (detail !== targetDetail) detail.removeAttribute("open");
+    });
+  });
+});
