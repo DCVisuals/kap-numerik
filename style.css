@@ -377,7 +377,6 @@ footer {
   list-style: none;
   padding-left: 0;
   margin-bottom: 1.5rem;
-  display: inline-block;
   text-align: left; /* pour que le texte soit lisible */
 }
 
