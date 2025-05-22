@@ -336,6 +336,16 @@ footer {
   margin-top: 2rem;
 }
 
+.cta-header.fade-in-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .cta-header {
     flex-direction: column;
