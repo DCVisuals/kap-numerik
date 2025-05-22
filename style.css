@@ -386,14 +386,6 @@ footer {
   text-align: left; /* pour que le texte soit lisible */
 }
 
-.why-points li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #00e676;
-  font-weight: bold;
-}
-
 .why-conclusion p {
   font-size: 1rem;
   margin-bottom: 0.8rem;
