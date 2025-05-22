@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = Array.from(track.children);
   const nextButton = document.querySelector(".carousel-btn.next");
   const prevButton = document.querySelector(".carousel-btn.prev");
-  const slideWidth = slides[0].getBoundingClientRect().width + 16;
+  const slideWidth = slides[0].getBoundingClientRect().width + 24;
 
   let currentSlideIndex = 0;
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   nextButton.addEventListener("click", () => {
-    if (currentSlideIndex < slides.length - 3) {
+    if (currentSlideIndex < slides.length - 2) {
       currentSlideIndex++;
       updateSlidePosition();
     }
