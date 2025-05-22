@@ -241,3 +241,11 @@ footer {
   border-color: #FFD700;
   background-color: #3b3b3b;
 }
+.cta-header,
+.cta-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
