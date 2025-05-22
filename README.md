@@ -1,3 +1,4 @@
-# Landing Page Kap Numérik x DCVisuals (Optimisée)
+# Landing Page DCVisuals v2
 
-Version enrichie avec animations, SEO et contenu synthétisé. Déployez sur GitHub Pages.
+Avec tarifs animés, section FAQ et témoignages clients.
+Palette : bleu roi, jaune, gris anthracite.

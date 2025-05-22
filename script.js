@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.fade-in, .fade-in-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  const scrollToKap = document.querySelector('a[href="#kap"]');
+  if (scrollToKap) {
+    scrollToKap.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#kap').scrollIntoView({ behavior: 'smooth' });
     });
-  }, {
-    threshold: 0.1
+  }
+
+  const fadeItems = document.querySelectorAll('.fade-price');
+  fadeItems.forEach((el, i) => {
+    setTimeout(() => el.style.opacity = 1, 500 + i * 100);
   });
-  elements.forEach(el => observer.observe(el));
 });
