@@ -55,6 +55,23 @@ function gtag_report_conversion(url) {
 }
 </script>
 
+ <!-- Event snippet for Clic email conversion -->
+<script>
+function gtag_report_conversion_email(url) {
+  var callback = function () {
+    if (typeof(url) !== 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11048297174/3yloCO-OiMwaENbFnpQp',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+  
 </head>
 
 <body>
@@ -74,7 +91,7 @@ function gtag_report_conversion(url) {
 <div class="cta-header">
   <a class="btn btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸 Voir nos réalisations</a>
   <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion()">📧 Envoyer un email</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion_email()">📧 Envoyer un email</a>
 </div>
 </section>
 
@@ -205,7 +222,7 @@ function gtag_report_conversion(url) {
 
   <div class="sticky-cta-mobile">
   <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion()">📧 Envoyer un email</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion_email()">📧 Envoyer un email</a>
   <a class="btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸</a>
 </div>
   
