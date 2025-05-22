@@ -18,8 +18,22 @@
   <meta property="og:url" content="https://dcvisuals.github.io/kap-numerik/" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Ads Conversion Tracking (si tu actives un objectif de conversion) -->
-  <!-- À ajouter dans le code Google Ads : voir étape 2 ci-dessous -->
+<!-- Google Ads Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11048297174/OLRMCIKT2JkaENbFnpQp',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
   <!-- Feuilles de style -->
   <link rel="stylesheet" href="style.css" />
@@ -33,8 +47,8 @@
 
 <div class="cta-header">
   <a class="btn btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸 Voir nos réalisations</a>
-  <a class="btn btn-phone" href="tel:+262692200461" target="_blank">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" target="_blank">📧 Envoyer un email</a>
+  <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion()">📧 Envoyer un email</a>
 </div>
 </header>
 
@@ -174,8 +188,8 @@
   </footer>
 
   <div class="sticky-cta-mobile">
-  <a class="btn-phone" href="tel:+262692200461" target="_blank">📞</a>
-  <a class="btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" target="_blank">📧</a>
+  <a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_conversion()">📞 Appeler DCVisuals</a>
+  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_conversion()">📧 Envoyer un email</a>
   <a class="btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸</a>
 </div>
   
