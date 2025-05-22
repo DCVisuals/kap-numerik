@@ -306,10 +306,10 @@ footer {
   .sticky-cta-mobile a {
     color: #fff;
     font-size: 1.4rem;
-    background: none;
     padding: 0.8rem;
     border-radius: 50%;
     transition: background-color 0.2s ease;
+    display: inline-block;
   }
 
   .sticky-cta-mobile .btn-phone:hover {
@@ -323,5 +323,19 @@ footer {
   .sticky-cta-mobile .btn-realisations:hover {
     background-color: #FFD700;
     color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .cta-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-header .btn {
+    width: 90%;
+    max-width: 320px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
   }
 }
