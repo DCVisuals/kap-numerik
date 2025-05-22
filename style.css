@@ -241,21 +241,46 @@ footer {
   border-color: #FFD700;
   background-color: #3b3b3b;
 }
+/* Base commune */
 .cta-header .btn {
-  background: #FFD700;
-  color: #000;
+  color: #fff;
   padding: 1rem 2rem;
   margin: 0.5rem;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.cta-header .btn:hover {
+/* Bouton Réalisations */
+.btn-realisations {
+  background-color: #FFD700;
+  color: #000;
+}
+.btn-realisations:hover {
+  background-color: #FFC107;
   transform: scale(1.05);
-  background-color: #ffc107;
   box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+}
+
+/* Bouton Téléphone */
+.btn-phone {
+  background-color: #28a745;
+}
+.btn-phone:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.4);
+}
+
+/* Bouton Email */
+.btn-mail {
+  background-color: #007bff;
+}
+.btn-mail:hover {
+  background-color: #0069d9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
 }
