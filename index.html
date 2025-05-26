@@ -49,25 +49,38 @@ function gtag_report_conversion(url) {
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 
-<!-- Clic téléphone : Google Ads conversion -->
+<!-- Conversion Téléphone -->
 <script>
-function gtag_report_phone() {
+function gtag_report_phone(url) {
+  var callback = function () {
+    if (typeof url !== 'undefined') {
+      window.location = url;
+    }
+  };
   gtag('event', 'conversion', {
-    'send_to': 'AW-11048297174/3yloCO-OiMwaENbFnpQp'
+    'send_to': 'AW-11048297174/3yloCO-OiMwaENbFnpQp',
+    'event_callback': callback
   });
   return false;
 }
 </script>
 
-<!-- Clic email : Google Ads conversion -->
+<!-- Conversion Email -->
 <script>
-function gtag_report_email() {
+function gtag_report_email(url) {
+  var callback = function () {
+    if (typeof url !== 'undefined') {
+      window.location = url;
+    }
+  };
   gtag('event', 'conversion', {
-    'send_to': 'AW-11048297174/8vCyCMLmiMwaENbFnpQp'
+    'send_to': 'AW-11048297174/8vCyCMLmiMwaENbFnpQp',
+    'event_callback': callback
   });
   return false;
 }
 </script>
+
 
   
 </head>
@@ -88,8 +101,8 @@ function gtag_report_email() {
 </p>
 <div class="cta-header">
   <a class="btn btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸 Voir nos réalisations</a>
-  <a class="btn btn-phone" href="tel:+262692200461" onclick="gtag_report_phone('tel:+262692200461')">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="gtag_report_email('mailto:dolcecartolina.visuals@gmail.com')">📧 Envoyer un email</a>
+<a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_phone('tel:+262692200461')">📞 Appeler DCVisuals</a>
+<a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_email('mailto:dolcecartolina.visuals@gmail.com')">📧 Envoyer un email</a>
 </div>
 </section>
 
@@ -193,8 +206,9 @@ function gtag_report_email() {
 
   <div class="cta-header fade-in-up">
   <a class="btn btn-realisations" href="https://dcvisuals.fr/nos-realisations" target="_blank">📸 Voir nos réalisations</a>
-  <a class="btn btn-phone" href="tel:+262692200461" onclick="gtag_report_phone('tel:+262692200461')">📞 Appeler DCVisuals</a>
-  <a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="gtag_report_email('mailto:dolcecartolina.visuals@gmail.com')">📧 Envoyer un email</a>
+<a class="btn btn-phone" href="tel:+262692200461" onclick="return gtag_report_phone('tel:+262692200461')">📞 Appeler DCVisuals</a>
+<a class="btn btn-mail" href="mailto:dolcecartolina.visuals@gmail.com" onclick="return gtag_report_email('mailto:dolcecartolina.visuals@gmail.com')">📧 Envoyer un email</a>
+
 </div>
   
 <section class="card faq-section fade-in-up">
