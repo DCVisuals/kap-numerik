@@ -30,17 +30,23 @@
   
 <!-- Google Ads Conversion Tracking -->
 <script>
-function gtag_report_conversion(url) {
+function gtag_report_conversion(type, url) {
+  const conversions = {
+    'phone': 'AW-11048297174/3yloCO-OiMwaENbFnpQp',
+    'email': 'AW-11048297174/8vCyCMLmiMwaENbFnpQp'
+  };
+
   var callback = function () {
-    if (typeof(url) != 'undefined') {
+    if (typeof url !== 'undefined') {
       window.location = url;
     }
   };
+
   gtag('event', 'conversion', {
-      'send_to': 'AW-11048297174/OLRMCIKT2JkaENbFnpQp',
-      'transaction_id': '',
-      'event_callback': callback
+    'send_to': conversions[type],
+    'event_callback': callback
   });
+
   return false;
 }
 </script>
