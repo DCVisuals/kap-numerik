@@ -1,34 +1,21 @@
-  const fadeItems = document.querySelectorAll('.fade-price');
-  fadeItems.forEach((el, i) => {
-    setTimeout(() => el.style.opacity = 1, 500 + i * 100);
-  });
-});
+const codesEligibles = ['4332A', '5610A', '9602B', '4932Z', '4334Z']; // à étendre
 
-  let currentSlideIndex = 0;
+document.getElementById('kapForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const ape = document.getElementById('ape').value.trim().toUpperCase();
+  const ca = parseFloat(document.getElementById('ca').value);
+  const salaries = parseInt(document.getElementById('salaries').value);
+  const montant = parseFloat(document.getElementById('montant').value);
+  const hauts = document.getElementById('hauts').value;
 
-  const updateSlidePosition = () => {
-    const offset = slideWidth * currentSlideIndex;
-    track.style.transform = `translateX(-${offset}px)`;
-  };
+  const eligible = 
+    codesEligibles.includes(ape) &&
+    ca <= 1000000 &&
+    salaries < 10 &&
+    montant >= 5001 && montant <= 19999 &&
+    hauts === 'non';
 
-  nextButton.addEventListener("click", () => {
-    if (currentSlideIndex < slides.length - 2) {
-      currentSlideIndex++;
-      updateSlidePosition();
-    }
-  });
-
-  prevButton.addEventListener("click", () => {
-    if (currentSlideIndex > 0) {
-      currentSlideIndex--;
-      updateSlidePosition();
-    }
-  });
-});
-document.querySelectorAll(".faq-section details").forEach((targetDetail) => {
-  targetDetail.addEventListener("click", () => {
-    document.querySelectorAll(".faq-section details").forEach((detail) => {
-      if (detail !== targetDetail) detail.removeAttribute("open");
-    });
-  });
+  document.getElementById('resultat').innerHTML = eligible 
+    ? "<p style='color: #00e676;'>✅ Vous êtes potentiellement éligible au Kap TPE.</p>"
+    : "<p style='color: red;'>❌ Vous ne remplissez pas tous les critères d’éligibilité.</p>";
 });
